@@ -6,36 +6,23 @@ import { Button } from "@/core/ui/button";
 import Link from "next/link";
 
 // Define the form validation schema
-const LoginFormSchema = Yup.object().shape({
-  email: Yup.string()
-    .email("Invalid email format")
-    .required("Email Address is Required"),
+const ResetPassFormSchema = Yup.object().shape({
   password: Yup.string().required("Password is Required"),
+  confirm_password: Yup.string()
+    .oneOf([Yup.ref("password")], "Passwords must match")
+    .required("Password is Required"),
 });
-
-const LoginForm = () => {
+const ResetPassForm = () => {
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
-      //   validationSchema={LoginFormSchema}
+      initialValues={{ password: "", confirm_password: "" }}
+    //   validationSchema={ResetPassFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
     >
       {({ errors, touched }) => (
         <Form className="gap-5 flex flex-col">
-          <div>
-            <Field
-              id="email"
-              name="email"
-              type="email"
-              className="w-full h-10 rounded-3xl px-5 outline-none"
-              placeholder="Email Address"
-            />
-            {errors.email && touched.email && (
-              <div className="text-xs text-red-500 p-2">{errors.email}</div>
-            )}
-          </div>
           <div>
             <Field
               id="password"
@@ -48,16 +35,28 @@ const LoginForm = () => {
               <div className="text-xs text-red-500 p-2">{errors.password}</div>
             )}
           </div>
-          <Link href={"/"}>
+          <div>
+            <Field
+              id="confirm_password"
+              name="confirm_password"
+              type="password"
+              className="w-full h-10 rounded-3xl px-5 outline-none"
+              placeholder="Password"
+            />
+            {errors.confirm_password && touched.confirm_password && (
+              <div className="text-xs text-red-500 p-2">
+                {errors.confirm_password}
+              </div>
+            )}
+          </div>
+
+          <Link href={"/login"}>
             <Button
               className="bg-primary text-center w-full rounded-3xl text-white mt-5 font-bold"
               type="submit"
             >
-              Login
+              Confirm
             </Button>
-          </Link>
-          <Link href={"/login/forgot-password"}>
-            <div className="underline text-red-500 pl-4">Forgot Password?</div>
           </Link>
         </Form>
       )}
@@ -65,4 +64,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ResetPassForm;

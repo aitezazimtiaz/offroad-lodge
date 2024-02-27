@@ -6,18 +6,17 @@ import { Button } from "@/core/ui/button";
 import Link from "next/link";
 
 // Define the form validation schema
-const LoginFormSchema = Yup.object().shape({
+const ForgetPassFormSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email format")
     .required("Email Address is Required"),
-  password: Yup.string().required("Password is Required"),
 });
 
-const LoginForm = () => {
+const ForgotPassForm = () => {
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
-      //   validationSchema={LoginFormSchema}
+      initialValues={{ email: "" }}
+      //   validationSchema={ForgetPassFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
@@ -36,28 +35,13 @@ const LoginForm = () => {
               <div className="text-xs text-red-500 p-2">{errors.email}</div>
             )}
           </div>
-          <div>
-            <Field
-              id="password"
-              name="password"
-              type="password"
-              className="w-full h-10 rounded-3xl px-5 outline-none"
-              placeholder="Password"
-            />
-            {errors.password && touched.password && (
-              <div className="text-xs text-red-500 p-2">{errors.password}</div>
-            )}
-          </div>
-          <Link href={"/"}>
+          <Link href={"/login/reset-password"}>
             <Button
               className="bg-primary text-center w-full rounded-3xl text-white mt-5 font-bold"
               type="submit"
             >
-              Login
+              Send link to reset
             </Button>
-          </Link>
-          <Link href={"/login/forgot-password"}>
-            <div className="underline text-red-500 pl-4">Forgot Password?</div>
           </Link>
         </Form>
       )}
@@ -65,4 +49,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ForgotPassForm;
