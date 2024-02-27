@@ -5,6 +5,56 @@
 body {
   font-family: "Segoe UI";
 }
+
+@layer base {
+  :root {
+    /* ****************************** */
+    --primary: 176 100% 32%;
+    --primary-foreground: 176 100% 32%;
+
+    --secondary: 174 50% 96%;
+    --secondary-foreground: 174 50% 96%;
+
+    --heading: 0 0% 19%;
+    --heading-foreground: 0 0% 19%;
+
+    --subheading: 0 0% 46%;
+    --subheading-foreground: 0 0% 46%;
+
+    --titleheading: 0 0% 76%;
+    --titleheading-foreground: 0 0% 76%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c5c5c5; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+  }
+}
+
 /* 
 @font-face {
   font-family: "Segoe UI";
