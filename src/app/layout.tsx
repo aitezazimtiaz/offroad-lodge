@@ -38,7 +38,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Segoe.className}>{children}</body>
+      <body
+        className={`min-h-screen max-w-screen-2xl mx-auto w-full layout-gradient ${Segoe.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
