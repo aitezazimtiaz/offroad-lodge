@@ -7,6 +7,8 @@ import { ProfileAvatar } from "./_components/ProfileAvatar";
 import SearchBox from "./_components/SearchBox";
 import Image from "next/image";
 import CompaniesList from "./_components/CompaniesList";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HomeLayout = async ({ children }: PropsWithChildren) => {
   return (
@@ -32,6 +34,19 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         </div>
       </div>
       <div className="w-full h-full">{children}</div>
+      <div className="flex  bg-primary w-64 justify-between rounded-3xl gap-1   fixed -rotate-90 top-[50%] -right-32 z-10 pb-12">
+        <Link href={"/register"} className="w-full">
+          <Button className="text-white w-full rounded-l-3xl  font-bold cursor-pointer">
+            Sign up
+          </Button>
+        </Link>
+        <div className="h-10 mt-1 bg-white w-[1px]"></div>
+        <Link href={"/login"} className="w-full">
+          <Button className="text-white w-full rounded-r-3xl font-bold cursor-pointer">
+            Login
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
