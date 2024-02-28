@@ -1,5 +1,5 @@
 import Topbar from "@/components/Topbar";
-import BackButton from "@/core/ui/BackButton";
+import BackButton from "@/components/ui/BackButton";
 import LoginForm from "./forms/LoginForm";
 
 export default function Login() {

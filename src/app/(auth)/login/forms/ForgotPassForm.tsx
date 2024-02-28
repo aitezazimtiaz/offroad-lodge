@@ -2,7 +2,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { Button } from "@/core/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 // Define the form validation schema

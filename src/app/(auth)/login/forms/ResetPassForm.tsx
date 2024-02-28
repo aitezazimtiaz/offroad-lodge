@@ -2,7 +2,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { Button } from "@/core/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 // Define the form validation schema
@@ -16,7 +16,7 @@ const ResetPassForm = () => {
   return (
     <Formik
       initialValues={{ password: "", confirm_password: "" }}
-    //   validationSchema={ResetPassFormSchema}
+      //   validationSchema={ResetPassFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
