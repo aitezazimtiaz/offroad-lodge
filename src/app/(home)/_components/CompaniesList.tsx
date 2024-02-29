@@ -18,7 +18,7 @@ export default function CompaniesList() {
           <CarouselContent className="w-full px-2">
             {companies.map((company, index) => (
               <CarouselItem
-                className="flex flex-col justify-center items-center  basis-1/3"
+                className="flex flex-col justify-center items-center   basis-1/3"
                 key={index}
               >
                 <Image
@@ -29,7 +29,9 @@ export default function CompaniesList() {
                   className="rounded-full"
                 />
 
-                <span>{company.username}</span>
+                <span className="text-center max-sm:text-xs">
+                  {company.username}
+                </span>
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -18,18 +18,38 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
       <div className="p-4 space-y-8">
         <div className="w-full flex gap-4 items-center justify-between">
           <Image src={"/assets/logo.svg"} alt="logo" width={110} height={110} />
-          <Navbar />
-          <SearchBox />
+
+          <div className="flex gap-40 max-xl:gap-20 justify-evenly max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:gap-5 max-sm:hidden">
+            <Navbar />
+            <SearchBox />
+          </div>
+
           <ProfileAvatar />
         </div>
-        <div className="flex gap-4 justify-between ">
-          <Filters />
-          <div className="bg-secondary p-2 rounded-xl">
+        <div className="flex gap-40 max-xl:gap-20 justify-evenly max-lg:flex-col max-lg:gap-5 sm:hidden max-sm:w-full max-sm:justify-center max-sm:items-center">
+          <Navbar />
+          <SearchBox />
+        </div>
+        <div className="flex gap-4 justify-between max-lg:flex-col ">
+          <div className="p-2  bg-secondary rounded-xl max-lg:order-2 max-lg:hidden">
+            <Filters />
+          </div>
+          <div className="bg-secondary p-2 rounded-xl max-lg:order-1">
             <CompaniesList />
           </div>
 
+          <div className="flex w-full justify-center items-center gap-5 max-lg:order-2 lg:hidden">
+            <div className="  bg-secondary rounded-xl max-lg:order-2">
+              <Filters />
+            </div>
+            <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:order-2">
+              <HostIcon />
+              <span>Become a Host</span>
+            </div>
+          </div>
+
           {/* Host Component */}
-          <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer">
+          <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:hidden">
             <HostIcon />
             <span>Become a Host</span>
           </div>
@@ -39,7 +59,7 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
       <Footer />
       <Copyright />
 
-      <div className="flex  bg-primary w-64 justify-between rounded-3xl gap-1   fixed -rotate-90 top-[50%] -right-32 z-10 pb-12">
+      <div className="flex max-sm:hidden bg-primary w-64 justify-between rounded-3xl gap-1   fixed -rotate-90 top-[50%] -right-32 z-10 pb-12">
         <Link href={"/register"} className="w-full">
           <Button className="text-white w-full rounded-l-3xl  font-bold cursor-pointer">
             Sign up

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -19,19 +20,27 @@ export function ProfileAvatar({ className }: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="relative">
+        <div className="relative cursor-pointer">
           <Avatar className="h-16 w-16">
             <AvatarImage src={"/assets/dummy_image.png"} alt="@shadcn" />
           </Avatar>
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-56 bg-greendarkest cursor-pointer border-none text-black"
+        className="w-56 bg-secondary cursor-pointer border-none text-black sm:hidden"
         align="end"
         forceMount
       >
-        <DropdownMenuItem className="cursor-pointer">Login</DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">Signup</DropdownMenuItem>
+        <Link href={"/login"}>
+          <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
+            Login
+          </DropdownMenuItem>
+        </Link>
+        <Link href={"/register"}>
+          <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
+            Signup
+          </DropdownMenuItem>
+        </Link>
       </DropdownMenuContent>
     </DropdownMenu>
   );

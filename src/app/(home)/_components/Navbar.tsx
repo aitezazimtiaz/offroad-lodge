@@ -26,26 +26,26 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <NavigationMenu className="bg-secondary px-4  rounded-xl">
+    <NavigationMenu className="bg-secondary px-4  rounded-xl w-full flex justify-center items-center">
       <NavigationMenuList>
         <NavigationMenuItem className="flex gap-5">
           <Link
             href={"/"}
-            className={`cursor-pointer font-semibold py-6 ${activeTab === "cabins" ? " text-primary  border-t-2 border-primary" : ""}`}
+            className={`cursor-pointer font-semibold text-center py-6 ${activeTab === "cabins" ? " text-primary  border-t-2 border-primary" : ""}`}
           >
             Cabins
           </Link>
 
           <Link
             href={"/GuidedTours"}
-            className={`cursor-pointer font-semibold py-6 ${activeTab === "guidedTours" ? " text-primary  border-t-2 border-primary" : ""}`}
+            className={`cursor-pointer text-center font-semibold py-6 ${activeTab === "guidedTours" ? " text-primary  border-t-2 border-primary" : ""}`}
           >
             Guided Tours
           </Link>
 
           <Link
             href={"/ATVRentals"}
-            className={`cursor-pointer font-semibold py-6 ${activeTab === "atvRentals" ? " text-primary  border-t-2 border-primary" : ""}`}
+            className={`cursor-pointer font-semibold text-center py-6 ${activeTab === "atvRentals" ? " text-primary  border-t-2 border-primary" : ""}`}
           >
             ATV Rentals
           </Link>
