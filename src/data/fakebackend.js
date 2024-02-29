@@ -238,3 +238,38 @@ export const cabinsListing = [
     price: "$345",
   },
 ];
+
+export const similarPlacesListing = [
+  {
+    image: [HouseImage1, HouseImage2, HouseImage3],
+    profileAvatar: ProfileImage1,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    hostName: "John Doe",
+    price: "$345",
+  },
+  {
+    image: [HouseImage2, HouseImage1, HouseImage3],
+    profileAvatar: ProfileImage2,
+    rating: "4.6",
+    location: "Hillside Hangout, Williamson",
+    hostName: "John Doe",
+    price: "$345",
+  },
+  {
+    image: [HouseImage3, HouseImage2, HouseImage1],
+    profileAvatar: ProfileImage3,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    hostName: "John Doe",
+    price: "$345",
+  },
+  {
+    image: [HouseImage2, HouseImage3, HouseImage1],
+    profileAvatar: ProfileImage4,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    hostName: "John Doe",
+    price: "$345",
+  },
+];

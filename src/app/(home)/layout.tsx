@@ -17,7 +17,15 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
     <div className="h-full w-full">
       <div className="p-4 space-y-8">
         <div className="w-full flex gap-4 items-center justify-between">
-          <Image src={"/assets/logo.svg"} alt="logo" width={110} height={110} />
+          <Link href={"/"}>
+            <Image
+              src={"/assets/logo.svg"}
+              alt="logo"
+              width={110}
+              height={110}
+              className="cursor-pointer"
+            />
+          </Link>
 
           <div className="flex gap-40 max-xl:gap-20 justify-evenly max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:gap-5 max-sm:hidden">
             <Navbar />
