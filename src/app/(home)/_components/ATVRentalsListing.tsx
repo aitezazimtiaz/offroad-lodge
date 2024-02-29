@@ -1,15 +1,14 @@
-import DisplayCard from "@/features/Cards/DisplayCard";
-import { cabinsListing } from "@/data/fakebackend";
+import { atvRentalListing } from "@/data/fakebackend";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import RentalDisplayCard from "@/features/Cards/RentalDisplayCard";
 
-export default function CabinsListing() {
+export default function ATVRentalsListing() {
   return (
     <>
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-10 justify-center items-center">
-          {cabinsListing.map((cabin, index) => (
-            <DisplayCard key={index} cabin={cabin} />
+          {atvRentalListing.map((rental, index) => (
+            <RentalDisplayCard key={index} rental={rental} />
           ))}
         </div>
         <div className="flex flex-col gap-3 justify-center items-center mt-20">

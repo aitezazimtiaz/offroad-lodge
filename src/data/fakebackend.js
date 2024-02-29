@@ -12,6 +12,12 @@ import ProfileImage2 from "../../public/assets/host_profile2.png";
 import ProfileImage3 from "../../public/assets/host_profile3.png";
 import ProfileImage4 from "../../public/assets/host_profile4.png";
 
+import ATVImage1 from "../../public/assets/atv_image1.png";
+import ATVImage2 from "../../public/assets/atv_image2.png";
+import ATVImage3 from "../../public/assets/atv_image3.png";
+import ATVImage4 from "../../public/assets/atv_image4.png";
+import ATVImage5 from "../../public/assets/atv_image5.png";
+
 export const companies = [
   {
     profileAvatar: CompanyProfile1,
@@ -47,7 +53,92 @@ export const companies = [
   },
 ];
 
-// Cabines Listing
+export const atvRentalListing = [
+  {
+    image: [ATVImage1, ATVImage2, ATVImage3],
+    profileAvatar: ProfileImage1,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage2, ATVImage3, ATVImage4],
+    profileAvatar: ProfileImage2,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage3, ATVImage4, ATVImage5],
+    profileAvatar: ProfileImage3,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage4, ATVImage1, ATVImage2],
+    profileAvatar: ProfileImage4,
+    rating: "4.3",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage2, ATVImage3, ATVImage4],
+    profileAvatar: ProfileImage2,
+    rating: "4.2",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage3, ATVImage4, ATVImage5],
+    profileAvatar: ProfileImage3,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage3, ATVImage4, ATVImage5],
+    profileAvatar: ProfileImage3,
+    rating: "4.6",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage4, ATVImage1, ATVImage2],
+    profileAvatar: ProfileImage4,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage2, ATVImage3, ATVImage4],
+    profileAvatar: ProfileImage2,
+    rating: "4.7",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage1, ATVImage2, ATVImage3],
+    profileAvatar: ProfileImage1,
+    rating: "4.3",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage2, ATVImage3, ATVImage4],
+    profileAvatar: ProfileImage2,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage3, ATVImage4, ATVImage5],
+    profileAvatar: ProfileImage3,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+];
 
 export const cabinsListing = [
   {

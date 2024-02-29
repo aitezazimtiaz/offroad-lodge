@@ -14,7 +14,7 @@ const SearchBox = () => {
         <span className="text-subheading">Add Guest</span>
       </div>
 
-      <div className="flex flex-col  bg-primary rounded-full p-3 max-sm:p-2 h-12 w-12 cursor-pointer">
+      <div className="flex flex-col justify-center items-center  bg-primary rounded-full p-3 max-sm:p-2 h-12 w-12 cursor-pointer">
         <SearchIcon />
       </div>
     </div>
