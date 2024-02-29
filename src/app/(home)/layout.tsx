@@ -9,6 +9,8 @@ import Image from "next/image";
 import CompaniesList from "./_components/CompaniesList";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Copyright from "./_components/Copyright";
+import Footer from "./_components/Footer";
 
 const HomeLayout = async ({ children }: PropsWithChildren) => {
   return (
@@ -34,6 +36,9 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         </div>
       </div>
       <div className="w-full h-full">{children}</div>
+      <Footer />
+      <Copyright />
+
       <div className="flex  bg-primary w-64 justify-between rounded-3xl gap-1   fixed -rotate-90 top-[50%] -right-32 z-10 pb-12">
         <Link href={"/register"} className="w-full">
           <Button className="text-white w-full rounded-l-3xl  font-bold cursor-pointer">
