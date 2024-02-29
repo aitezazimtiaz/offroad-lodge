@@ -7,11 +7,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
 
 interface Cabin {
-  image: string[]; // an array of string paths to images
-  profileAvatar: string;
+  image: StaticImageData[]; // an array of string paths to images
+  profileAvatar: StaticImageData;
 
   rating: string; // string representing the rating (e.g., "4.8")
   location: string;
@@ -23,20 +24,27 @@ const DisplayCard: React.FC<{ cabin: Cabin }> = ({ cabin }) => {
   return (
     <div className="">
       <div className="w-64 h-54 rounded-xl outline-none mt-10 relative cursor-pointer">
-        <Carousel>
-          <CarouselPrevious />
-          <CarouselContent>
-            {cabin.image.map((image, index) => (
-              <CarouselItem
-                key={index}
-                className="flex flex-col justify-center items-center"
-              >
-                <Image src={image} alt="home_image" width={600} height={600} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselNext />
-        </Carousel>
+        <Link href={"/12"}>
+          <Carousel>
+            <CarouselPrevious />
+            <CarouselContent>
+              {cabin.image.map((image, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex flex-col justify-center items-center"
+                >
+                  <Image
+                    src={image}
+                    alt="home_image"
+                    width={600}
+                    height={600}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselNext />
+          </Carousel>
+        </Link>
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
           <div className="flex items-center gap-2">
             <RatingIcon />

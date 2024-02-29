@@ -11,8 +11,8 @@ export default function Footer() {
 
           {/* Nav Links */}
 
-          <div className="flex  gap-16 max-lg:flex-wrap max-sm:flex-col max-sm:justify-center max-sm:items-center max-lg:gap-8">
-            <div className="flex flex-col gap-3 max-sm:w-full max-sm:text-center">
+          <div className="flex   gap-20 max-md:flex-col max-md:justify-center max-md:items-center max-lg:gap-4">
+            <div className="flex flex-col gap-3 max-md:w-full max-md:text-center">
               <span className="font-semibold text-heading">Quick Links</span>
               <div className="mt-2 flex flex-col">
                 <span className="text-subheading font-semibold cursor-pointer">
@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col  gap-3 max-sm:w-full max-sm:text-center">
+            <div className="flex flex-col  gap-3 max-md:w-full max-md:text-center">
               <span className="font-semibold text-heading">Contact Us</span>
               <div className="mt-2 flex flex-col">
                 <span className="text-subheading font-semibold cursor-pointer">
@@ -39,9 +39,9 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 max-sm:w-full max-sm:text-center">
+            <div className="flex flex-col gap-3 max-md:w-full max-md:text-center">
               <span className="font-semibold text-heading">Find us on</span>
-              <div className="mt-2 flex flex-col gap-2 max-sm:justify-center max-sm:items-center">
+              <div className="mt-2 flex flex-col gap-2 max-md:justify-center max-md:items-center">
                 <div className="flex items-center gap-2 cursor-pointer">
                   <FacebookIcon />
                   <span className="text-subheading font-semibold">
