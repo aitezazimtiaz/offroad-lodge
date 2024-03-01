@@ -6,7 +6,7 @@ export default function HostDetailCard() {
       <div className="flex flex-col gap-3">
         <span className="text-heading text-xl font-bold">Meet the host</span>
 
-        <div className="flex  justify-between items-center bg-secondary rounded-xl p-4 ">
+        <div className="flex  justify-between items-center max-sm:flex-col max-sm:gap-4 bg-secondary rounded-xl p-4 ">
           <div className="flex  gap-3 items-center ">
             <Image
               src={"/assets/host_profile4.png"}
@@ -18,7 +18,7 @@ export default function HostDetailCard() {
             <span className="text-heading text-xl font-bold ">John Doe</span>
           </div>
 
-          <div className="w-[1px] h-14 bg-titleheading"></div>
+          <div className="w-[1px] h-14 bg-titleheading max-sm:hidden"></div>
 
           <div className="flex gap-3 items-center">
             <PlacesIcon />

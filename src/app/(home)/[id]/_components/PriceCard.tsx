@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function PriceCard() {
   return (
     <>
-      <div className="flex items-center gap-3 p-4 bg-secondary rounded-xl  justify-end">
+      <div className="flex items-center gap-3 p-4 bg-secondary rounded-xl  justify-end max-sm:flex-wrap max-sm:justify-center">
         <div>
           <span className="text-red-500 font-bold text-lg">$325</span>
           <span>/night</span>

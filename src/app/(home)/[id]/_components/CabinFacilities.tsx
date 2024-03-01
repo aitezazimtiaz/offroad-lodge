@@ -10,7 +10,7 @@ export default function CabinFacilities() {
   return (
     <>
       <div className="flex flex-col p-4 space-y-8">
-        <div className="flex items-center gap-16">
+        <div className="flex items-center gap-16 max-sm:flex-wrap max-sm:gap-8">
           {/* Bathroom Count */}
           <div className="flex flex-col gap-1">
             <div className="flex items-center relative">
@@ -61,11 +61,11 @@ export default function CabinFacilities() {
         </div>
 
         {/* The Space */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col  gap-3">
           <span className="text-2xl font-bold text-heading">The Space</span>
 
           <div className="rounded-xl  bg-secondary p-4">
-            <div className="flex justify-between  items-center">
+            <div className="flex justify-between  items-center max-sm:flex-wrap  ">
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
@@ -123,7 +123,7 @@ export default function CabinFacilities() {
           </span>
 
           <div className="rounded-xl  bg-secondary p-4">
-            <div className="flex justify-between ">
+            <div className="flex justify-between max-sm:flex-wrap ">
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">

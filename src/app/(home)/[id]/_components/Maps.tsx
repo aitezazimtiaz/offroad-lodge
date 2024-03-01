@@ -6,8 +6,9 @@ import LocationIcon from "@/components/icons/LocationIcon";
 const containerStyle = {
   width: "100%",
   height: "500px",
-  marginTop: "50px",
+  marginTop: "10px",
   borderRadius: "30px",
+  border: "none",
 };
 
 const center = {
@@ -28,7 +29,7 @@ const mapOptions = {
 function GoogleMaps() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_REACT_APP_MAP_KEY,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_REACT_APP_MAP_KEY ?? "",
   });
 
   return isLoaded ? (

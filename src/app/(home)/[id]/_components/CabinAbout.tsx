@@ -3,7 +3,7 @@ export default function CabinAbout() {
     <>
       <div className="flex flex-col gap-3">
         <div className="flex justify-between">
-          <span className="text-heading text-xl font-bold">
+          <span className="text-heading text-2xl font-bold">
             About this place
           </span>
           <span className="text-red-500 underline cursor-pointer">
