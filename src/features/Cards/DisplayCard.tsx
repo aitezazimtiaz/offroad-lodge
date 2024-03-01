@@ -24,9 +24,9 @@ const DisplayCard: React.FC<{ cabin: Cabin }> = ({ cabin }) => {
   return (
     <div className="">
       <div className="w-64 h-54 rounded-xl outline-none mt-10 relative cursor-pointer">
-        <Link href={"/12"}>
-          <Carousel>
-            <CarouselPrevious />
+        <Carousel>
+          <CarouselPrevious />
+          <Link href={"/12"}>
             <CarouselContent>
               {cabin.image.map((image, index) => (
                 <CarouselItem
@@ -42,9 +42,10 @@ const DisplayCard: React.FC<{ cabin: Cabin }> = ({ cabin }) => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext />
-          </Carousel>
-        </Link>
+          </Link>
+          <CarouselNext />
+        </Carousel>
+
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
           <div className="flex items-center gap-2">
             <RatingIcon />
