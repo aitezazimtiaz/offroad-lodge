@@ -46,7 +46,9 @@ const UploadImageForm = () => {
   });
 
   const imagePreview =
-    formik.values.image instanceof FileList && formik.values.image?.[0]
+    typeof window !== "undefined" &&
+    formik.values.image instanceof FileList &&
+    formik.values.image?.[0]
       ? URL.createObjectURL(formik.values.image?.[0])
       : null;
 
