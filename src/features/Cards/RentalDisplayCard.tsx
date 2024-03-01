@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
 
 interface Rental {
   image: StaticImageData[]; // an array of string paths to images
@@ -24,16 +25,23 @@ const RentalDisplayCard: React.FC<{ rental: Rental }> = ({ rental }) => {
       <div className="w-64 h-54 rounded-xl outline-none mt-10 relative cursor-pointer">
         <Carousel>
           <CarouselPrevious />
-          <CarouselContent>
-            {rental.image.map((image, index) => (
-              <CarouselItem
-                key={index}
-                className="flex flex-col justify-center items-center"
-              >
-                <Image src={image} alt="home_image" width={600} height={600} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+          <Link href={"/ATVRentals/12"}>
+            <CarouselContent>
+              {rental.image.map((image, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex flex-col justify-center items-center"
+                >
+                  <Image
+                    src={image}
+                    alt="home_image"
+                    width={600}
+                    height={600}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Link>
           <CarouselNext />
         </Carousel>
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
