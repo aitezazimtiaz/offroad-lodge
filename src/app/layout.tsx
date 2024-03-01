@@ -1,4 +1,30 @@
 import "@/styles/globals.css";
+import localFont from "next/font/local";
+
+const Segoe = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SegoeUI.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/SegoeUIItalic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/SegoeUIBold.ttf",
+      weight: "700",
+      style: "bold",
+    },
+    {
+      path: "../../public/fonts/SegoeUIBoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+});
 
 export const metadata = {
   title: "OFFROAD LODGE",
@@ -12,9 +38,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen max-w-screen-2xl mx-auto w-full">
+      <body
+        className={`min-h-screen max-w-screen-2xl mx-auto w-full layout-gradient ${Segoe.className}`}
+      >
         {children}
       </body>
     </html>
   );
 }
+
+// className="min-h-screen max-w-screen-2xl mx-auto w-full"
