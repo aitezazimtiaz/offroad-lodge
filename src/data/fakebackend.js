@@ -273,3 +273,27 @@ export const similarPlacesListing = [
     price: "$345",
   },
 ];
+
+export const multiMarkers = [
+  {
+    position: { lat: 36.7733, lng: -119.4289 },
+    title: "Hillside Hangout",
+    address: "abc street NYC",
+    price: "$350",
+  },
+  { position: { lat: 36.7799, lng: -119.4299 }, title: "Hillside Hangout",
+  address: "abc street NYC",
+  price: "$350",},
+  { position: { lat: 36.781, lng: -119.4159 }, title: "Hillside Hangout",
+  address: "abc street NYC",
+  price: "$350",},
+  { position: { lat: 36.782, lng: -119.4189 }, title: "Hillside Hangout",
+  address: "abc street NYC",
+  price: "$350", },
+  { position: { lat: 36.7883, lng: -119.4229 }, title: "Hillside Hangout",
+  address: "abc street NYC",
+  price: "$350",},
+  { position: { lat: 36.7801, lng: -119.4119 }, title: "Hillside Hangout",
+  address: "abc street NYC",
+  price: "$350",},
+];
