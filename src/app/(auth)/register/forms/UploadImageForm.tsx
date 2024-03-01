@@ -23,10 +23,12 @@ const imageForm = z.object({
     .any()
     .optional()
     .refine(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       (files) => files?.[0]?.size <= MAX_FILE_SIZE,
       `Max image size is 5MB.`
     )
     .refine(
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
       "Only .jpg, .jpeg, .png and .webp formats are supported."
     ),
