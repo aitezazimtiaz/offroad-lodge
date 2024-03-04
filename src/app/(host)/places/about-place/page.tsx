@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPlace() {
   return (
     <>
       <div className="flex flex-col gap-12 space-y-5  items-center justify-center w-full h-full p-4">
-        <span className="font-bold text-2xl mt-20 max-sm:text-center">
+        <span className="font-bold text-2xl mt-16 max-sm:text-center">
           Tell us about your Place
         </span>
 
@@ -30,9 +31,11 @@ export default function AboutPlace() {
             </div>
           </div>
           <div className="w-full flex items-center justify-end mt-10 mb-10">
-            <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
-              Next
-            </Button>
+            <Link href={"/places/describe-place"}>
+              <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
+                Next
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
