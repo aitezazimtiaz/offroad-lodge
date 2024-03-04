@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Places() {
   return (
@@ -83,9 +84,11 @@ export default function Places() {
             </div>
           </div>
           <div className="w-full flex items-center justify-end mt-10 mb-10">
-            <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
-              Next
-            </Button>
+            <Link href={"/places/about-place"}>
+              <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
+                Next
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
