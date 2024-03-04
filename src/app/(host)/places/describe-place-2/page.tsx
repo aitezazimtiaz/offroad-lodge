@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import RoomIcon from "@/components/icons/RoomIcon";
 import SharedRoomIcon from "@/components/icons/SharedRoomIcon";
 import SmallHouseIcon from "@/components/icons/SmallHouseIcon";
+import Link from "next/link";
 
 export default function DescribePlace2() {
   // Define state to track the selected div
@@ -80,7 +81,12 @@ export default function DescribePlace2() {
               <SharedRoomIcon />
             </div>
           </div>
-          <div className="w-full flex items-center justify-end mt-10 mb-10">
+          <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
+            <Link href={"/places/describe-place"}>
+              <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
+                Back
+              </Button>
+            </Link>
             <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
               Next
             </Button>
