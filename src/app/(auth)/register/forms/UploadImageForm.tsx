@@ -25,6 +25,7 @@ const imageForm = z.object({
     .optional()
     .refine(
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       (files) => files?.[0]?.size <= MAX_FILE_SIZE,
       `Max image size is 5MB.`
     )
