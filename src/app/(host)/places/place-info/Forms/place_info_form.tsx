@@ -28,7 +28,7 @@ const PlaceInfoForm = () => {
               id="title"
               name="title"
               type="text"
-              className="w-full h-12 rounded-3xl px-5 outline-none"
+              className="w-full h-12 rounded-xl px-5 outline-none"
               placeholder="Title"
             />
             {errors.title && touched.title && (
@@ -39,7 +39,7 @@ const PlaceInfoForm = () => {
             <textarea
               id="rules"
               name="rules"
-              className="w-full h-28 rounded-3xl p-4 outline-none"
+              className="w-full h-28 rounded-xl p-4 outline-none"
               placeholder="Rules"
             />
             {errors.rules && touched.rules && (
@@ -52,7 +52,7 @@ const PlaceInfoForm = () => {
               id="price"
               name="price"
               type="text"
-              className="w-full h-12 rounded-3xl px-5 outline-none"
+              className="w-full h-12 rounded-xl px-5 outline-none"
               placeholder="Price"
             />
             {errors.price && touched.price && (

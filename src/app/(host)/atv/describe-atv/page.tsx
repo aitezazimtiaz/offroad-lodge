@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import HondaIcon from "@/components/icons/HondaIcon";
 import YamahaIcon from "@/components/icons/YamahaIcon";
 import FordIcon from "@/components/icons/FordIcon";
+import Link from "next/link";
 
 export default function DescribeATV() {
   // Define state to track the selected div
@@ -61,9 +62,11 @@ export default function DescribeATV() {
             </div>
           </div>
           <div className="w-full flex items-center justify-end mt-10 mb-10">
-            <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
-              Next
-            </Button>
+            <Link href={"/atv/atv-info"}>
+              <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
+                Next
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

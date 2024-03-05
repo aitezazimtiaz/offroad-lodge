@@ -137,7 +137,7 @@ const UploadImages = () => {
                   <div className="mb-3 mt-3 cursor-pointer">
                     <UploadMultiImageIcon />
                   </div>
-                  <span className="text-subheading text-lg">
+                  <span className="text-subheading text-lg text-center">
                     Drag or upload images from your device
                   </span>
                 </div>
