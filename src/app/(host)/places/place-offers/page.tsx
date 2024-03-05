@@ -85,7 +85,7 @@ export default function PlaceOffers() {
                 Back
               </Button>
             </Link>
-            <Link href={"/places/place-info"}>
+            <Link href={"/places/upload-places-images"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>
