@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPlace() {
+export default function PlaceInstructions() {
   return (
     <>
       <div className="flex flex-col gap-12 space-y-5  items-center justify-center w-full h-full p-4">
         <span className="font-bold text-2xl mt-16 max-sm:text-center">
-          Tell us about your Place
+          Make your place stand out
         </span>
 
         <div className="flex flex-col gap-4 w-1/2 max-xl:w-3/4 max-sm:w-full">
@@ -22,7 +22,7 @@ export default function AboutPlace() {
                 Duis sodales feugiat nibh.
               </span>
               <Image
-                src={"/assets/tell_about_place.png"}
+                src={"/assets/place_instructions.png"}
                 alt="place"
                 width={200}
                 height={200}
@@ -30,12 +30,16 @@ export default function AboutPlace() {
               />
             </div>
           </div>
-          <div className="w-full flex items-center justify-end mt-10 mb-10">
-            <Link href={"/places/describe-place"}>
+          <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
+            <Link href={"/"}>
+              <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
+                Back
+              </Button>
+            </Link>
+            <Link href={"/"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>
-              -
             </Link>
           </div>
         </div>
