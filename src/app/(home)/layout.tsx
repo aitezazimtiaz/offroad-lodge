@@ -50,17 +50,21 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
             <div className="  bg-secondary rounded-xl max-lg:order-2">
               <Filters />
             </div>
-            <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:order-2">
-              <HostIcon />
-              <span>Become a Host</span>
-            </div>
+            <Link href={"/onboarding"}>
+              <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:order-2">
+                <HostIcon />
+                <span>Become a Host</span>
+              </div>
+            </Link>
           </div>
 
           {/* Host Component */}
-          <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:hidden">
-            <HostIcon />
-            <span>Become a Host</span>
-          </div>
+          <Link href={"/onboarding"}>
+            <div className="flex items-center gap-3 bg-secondary p-4 rounded-xl cursor-pointer max-lg:hidden">
+              <HostIcon />
+              <span>Become a Host</span>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="w-full h-full">{children}</div>
