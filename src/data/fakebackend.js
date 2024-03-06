@@ -347,3 +347,34 @@ export const placesListing = [
     price: "$345",
   },
 ];
+
+export const atvListing = [
+  {
+    image: [ATVImage1, ATVImage2, ATVImage3],
+    profileAvatar: ProfileImage1,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage2, ATVImage3, ATVImage4],
+    profileAvatar: ProfileImage2,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage3, ATVImage4, ATVImage5],
+    profileAvatar: ProfileImage3,
+    rating: "4.8",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+  {
+    image: [ATVImage4, ATVImage1, ATVImage2],
+    profileAvatar: ProfileImage4,
+    rating: "4.3",
+    location: "Hillside Hangout, Williamson",
+    price: "$345",
+  },
+];

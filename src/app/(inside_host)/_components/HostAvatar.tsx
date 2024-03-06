@@ -31,25 +31,23 @@ export function HostAvatar() {
             My Account
           </DropdownMenuItem>
         </Link>
-        <Link href={"/listing"}>
+
+        <Link href={"/CommunityFeed"}>
           <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
-            Listing
+            Community
           </DropdownMenuItem>
         </Link>
-        {/* <Link href={"/community"}> */}
-        <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
-          Community
-        </DropdownMenuItem>
-        {/* </Link> */}
         {/* <Link href={"/chat"}> */}
         <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
           Messages
         </DropdownMenuItem>
         {/* </Link> */}
 
-        <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
-          Sign Out
-        </DropdownMenuItem>
+        <Link href={"/login"}>
+          <DropdownMenuItem className="cursor-pointer hover:bg-primary hover:text-white rounded-md">
+            Sign Out
+          </DropdownMenuItem>
+        </Link>
       </DropdownMenuContent>
     </DropdownMenu>
   );

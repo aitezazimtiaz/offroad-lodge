@@ -1,4 +1,6 @@
+import PencilIcon from "@/components/icons/PencilIcon";
 import RatingIcon from "@/components/icons/RatingIcon";
+import TrashIcon from "@/components/icons/TrashIcon";
 
 import {
   Carousel,
@@ -44,6 +46,18 @@ const PlaceDisplayCard: React.FC<{ place: Place }> = ({ place }) => {
           </Link>
           <CarouselNext />
         </Carousel>
+
+        <div className="absolute top-1 flex gap-3 justify-end p-4 w-full">
+          <Link href={"/places/place-info"}>
+            <div className="rounded-full p-2 bg-primary flex justify-center items-center">
+              <PencilIcon stroke="white" />
+            </div>
+          </Link>
+
+          <div className="rounded-full p-2 bg-primary flex justify-center items-center">
+            <TrashIcon />
+          </div>
+        </div>
 
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
           <div className="flex items-center gap-2">

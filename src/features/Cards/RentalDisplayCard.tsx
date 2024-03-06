@@ -1,4 +1,6 @@
+import PencilIcon from "@/components/icons/PencilIcon";
 import RatingIcon from "@/components/icons/RatingIcon";
+import TrashIcon from "@/components/icons/TrashIcon";
 
 import {
   Carousel,
@@ -19,13 +21,16 @@ interface Rental {
   price: string;
 }
 
-const RentalDisplayCard: React.FC<{ rental: Rental }> = ({ rental }) => {
+const RentalDisplayCard: React.FC<{ rental: Rental; showIcons: boolean }> = ({
+  rental,
+  showIcons,
+}) => {
   return (
     <div className="">
       <div className="w-64 h-54 rounded-xl outline-none mt-10 relative cursor-pointer">
         <Carousel>
           <CarouselPrevious />
-          <Link href={"/ATVRentals/12"}>
+          <Link href={"/host-home-page/atv/12"}>
             <CarouselContent>
               {rental.image.map((image, index) => (
                 <CarouselItem
@@ -44,6 +49,20 @@ const RentalDisplayCard: React.FC<{ rental: Rental }> = ({ rental }) => {
           </Link>
           <CarouselNext />
         </Carousel>
+
+        {showIcons && (
+          <div className="absolute top-1 flex gap-3 justify-end p-4 w-full">
+            <Link href={"/atv/atv-info"}>
+              <div className="rounded-full p-2 bg-primary flex justify-center items-center">
+                <PencilIcon stroke="white" />
+              </div>
+            </Link>
+            <div className="rounded-full p-2 bg-primary flex justify-center items-center">
+              <TrashIcon />
+            </div>
+          </div>
+        )}
+
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
           <div className="flex items-center gap-2">
             <RatingIcon />

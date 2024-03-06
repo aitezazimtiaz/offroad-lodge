@@ -36,11 +36,11 @@ export default function PublishATV() {
                 Back
               </Button>
             </Link>
-            {/* <Link href={"/places/place-offers"}> */}
-            <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
-              Publish
-            </Button>
-            {/* </Link> */}
+            <Link href={"/host-home-page"}>
+              <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
+                Publish
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
