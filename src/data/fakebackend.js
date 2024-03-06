@@ -297,3 +297,4 @@ export const multiMarkers = [
   address: "abc street NYC",
   price: "$350",},
 ];
+

@@ -1,6 +1,7 @@
 import FacebookIcon from "@/components/icons/FacebookIcon";
 import YoutubeIcon from "@/components/icons/YoutubeIcon";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -18,9 +19,11 @@ export default function Footer() {
                 <span className="text-subheading font-semibold cursor-pointer">
                   Home
                 </span>
+                <Link href= "/CommunityFeed">
                 <span className="text-subheading font-semibold cursor-pointer">
                   Community Forum
                 </span>
+                </Link>
                 <span className="text-subheading font-semibold cursor-pointer">
                   About us
                 </span>
