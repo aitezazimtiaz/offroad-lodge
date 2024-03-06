@@ -378,3 +378,4 @@ export const atvListing = [
     price: "$345",
   },
 ];
+
