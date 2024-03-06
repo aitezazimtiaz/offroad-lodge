@@ -8,7 +8,7 @@ export default function ATVRentalsListing() {
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-10 justify-center items-center">
           {atvRentalListing.map((rental, index) => (
-            <RentalDisplayCard key={index} rental={rental} />
+            <RentalDisplayCard key={index} rental={rental} showIcons={false} />
           ))}
         </div>
         <div className="flex flex-col gap-3 justify-center items-center mt-20">

@@ -12,7 +12,7 @@ import {
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
-interface Rental {
+interface Place {
   image: StaticImageData[]; // an array of string paths to images
   profileAvatar: StaticImageData;
 
@@ -21,18 +21,15 @@ interface Rental {
   price: string;
 }
 
-const RentalDisplayCard: React.FC<{ rental: Rental; showIcons: boolean }> = ({
-  rental,
-  showIcons,
-}) => {
+const PlaceDisplayCard: React.FC<{ place: Place }> = ({ place }) => {
   return (
     <div className="">
       <div className="w-64 h-54 rounded-xl outline-none mt-10 relative cursor-pointer">
         <Carousel>
           <CarouselPrevious />
-          <Link href={"/host-home-page/atv/12"}>
+          <Link href={"host-home-page/12"}>
             <CarouselContent>
-              {rental.image.map((image, index) => (
+              {place.image.map((image, index) => (
                 <CarouselItem
                   key={index}
                   className="flex flex-col justify-center items-center"
@@ -50,26 +47,25 @@ const RentalDisplayCard: React.FC<{ rental: Rental; showIcons: boolean }> = ({
           <CarouselNext />
         </Carousel>
 
-        {showIcons && (
-          <div className="absolute top-1 flex gap-3 justify-end p-4 w-full">
-            <Link href={"/atv/atv-info"}>
-              <div className="rounded-full p-2 bg-primary flex justify-center items-center">
-                <PencilIcon stroke="white" />
-              </div>
-            </Link>
+        <div className="absolute top-1 flex gap-3 justify-end p-4 w-full">
+          <Link href={"/places/place-info"}>
             <div className="rounded-full p-2 bg-primary flex justify-center items-center">
-              <TrashIcon />
+              <PencilIcon stroke="white" />
             </div>
+          </Link>
+
+          <div className="rounded-full p-2 bg-primary flex justify-center items-center">
+            <TrashIcon />
           </div>
-        )}
+        </div>
 
         <div className=" absolute bottom-5 flex w-full px-4 justify-between">
           <div className="flex items-center gap-2">
             <RatingIcon />
-            <span className="text-titleheading font-bold">{rental.rating}</span>
+            <span className="text-titleheading font-bold">{place.rating}</span>
           </div>
           <Image
-            src={rental.profileAvatar}
+            src={place.profileAvatar}
             alt="profile_avatar"
             width={50}
             height={50}
@@ -78,14 +74,14 @@ const RentalDisplayCard: React.FC<{ rental: Rental; showIcons: boolean }> = ({
         </div>
       </div>
       <div className="flex flex-col mt-3">
-        <span className="font-semibold text-heading">{rental.location}</span>
+        <span className="font-bold text-heading">{place.location}</span>
 
-        <span className="font-semibold text-heading">
-          <span className="text-red-500 font-semibold">{rental.price}</span>/Day
+        <span className="font-bold text-heading">
+          <span className="text-red-500 font-bold">{place.price}</span>/night
         </span>
       </div>
     </div>
   );
 };
 
-export default RentalDisplayCard;
+export default PlaceDisplayCard;

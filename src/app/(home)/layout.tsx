@@ -9,8 +9,8 @@ import Image from "next/image";
 import CompaniesList from "./_components/CompaniesList";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Copyright from "./_components/Copyright";
-import Footer from "./_components/Footer";
+import Copyright from "../../components/Copyright";
+import Footer from "../../components/Footer";
 
 const HomeLayout = async ({ children }: PropsWithChildren) => {
   return (
