@@ -17,7 +17,7 @@ export default function ATVPricing() {
           </div>
 
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/atv/atv-info"}>
+            <Link href={"/atv/add-location"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>

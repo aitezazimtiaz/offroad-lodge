@@ -24,6 +24,7 @@ export default function Footer() {
                   Community Forum
                 </span>
                 </Link>
+              
                 <Link href= "/AboutUs">
                 <span className="text-subheading font-semibold cursor-pointer">
                   About us
