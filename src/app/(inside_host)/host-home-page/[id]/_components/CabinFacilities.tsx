@@ -1,10 +1,8 @@
 import BathIcon from "@/components/icons/BathIcon";
 import BedIcon from "@/components/icons/BedIcon";
-import CheckinIcon from "@/components/icons/CheckinIcon";
-import CheckoutIcon from "@/components/icons/CheckoutIcon";
+
 import EssentialsIcon from "@/components/icons/EssentialsIcon";
 import GuestIcon from "@/components/icons/GuestIcon";
-import StrictIcon from "@/components/icons/StrictIcon";
 
 export default function CabinFacilities() {
   return (

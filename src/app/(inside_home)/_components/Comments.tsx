@@ -34,8 +34,8 @@ const RoundedReplyPlaceholder = () => {
           Reply
         </Button>
       </div>
-      <div className="p-4 max-sm:p-0 max-sm:mt-4">
-      {showReplyForm && <ReplyForm />}
+      <div className={`p-4  max-sm:p-0 max-sm:mt-4 ${showReplyForm ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`} style={{ transition: "opacity 0.5s, max-height 0.3s" }}>
+        {showReplyForm && <ReplyForm />}
       </div>
     </div>
   );
