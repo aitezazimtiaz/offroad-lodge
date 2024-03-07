@@ -33,9 +33,11 @@ export default function Footer() {
             <div className="flex flex-col  gap-3 max-md:w-full max-md:text-center">
               <span className="font-semibold text-heading">Contact Us</span>
               <div className="mt-2 flex flex-col">
+              <Link href= "/ContactUs">
                 <span className="text-subheading font-semibold cursor-pointer">
                   Support
                 </span>
+                </Link>
                 <span className="text-subheading font-semibold cursor-pointer">
                   FAQs
                 </span>
