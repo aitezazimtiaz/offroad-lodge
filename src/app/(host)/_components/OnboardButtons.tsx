@@ -1,5 +1,6 @@
 import ATVIcon from "@/components/icons/ATVIcon";
 import HomeIcon from "@/components/icons/HomeIcon";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function OnboardButtons() {
@@ -27,7 +28,13 @@ export default function OnboardButtons() {
 
           <Link href={"/guided-tours"}>
             <div className="rounded-2xl flex flex-col gap-6 items-center border border-titleheading div-drop-shadow py-10 px-8 hover:bg-secondary hover:border-primary cursor-pointer">
-              <HomeIcon />
+              {/* <HomeIcon /> */}
+              <Image
+                src={"/assets/guide_tour_icon.png"}
+                alt="guided_tour"
+                width={70}
+                height={70}
+              />
               <span className="font-bold text-2xl text-center">
                 Guided Tours
               </span>
