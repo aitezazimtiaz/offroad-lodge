@@ -1,4 +1,4 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 import CommentForm from "./CommentForm";
 import { CommentData } from "@/data/CommunityfakeData";
 import Image from "next/image";
