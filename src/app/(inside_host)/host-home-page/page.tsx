@@ -1,5 +1,6 @@
 import ATVListing from "../_components/ATVListing";
 import PlacesListing from "../_components/PlacesListing";
+import ToursListing from "../_components/ToursListing";
 
 export default function HostHomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HostHomePage() {
       <span className="text-heading font-bold text-xl"> Your Listing</span>
       <PlacesListing />
       <ATVListing />
+      <ToursListing />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import RentalDisplayCard from "@/features/Cards/RentalDisplayCard";
 export default function ATVListing() {
   return (
     <>
-      <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col gap-4 p-5 ">
         <span className="text-heading text-xl font-bold">
           ATV Rental Listing
         </span>
