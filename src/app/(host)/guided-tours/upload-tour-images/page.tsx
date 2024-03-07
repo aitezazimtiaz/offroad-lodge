@@ -16,7 +16,7 @@ export default function UploadTourImages() {
           </div>
 
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/guided-tours"}>
+            <Link href={"/guided-tours/add-location"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>

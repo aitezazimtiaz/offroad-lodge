@@ -16,7 +16,7 @@ export default function GuidedTourInfo() {
           </div>
 
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/guided-tours/upload-tour-images"}>
+            <Link href={"/guided-tours/add-location"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>
