@@ -24,6 +24,13 @@ export default function OnboardButtons() {
               <span className="font-bold text-2xl">ATV</span>
             </div>
           </Link>
+
+          <Link href={"/guided-tours"}>
+            <div className="rounded-2xl flex flex-col gap-6 items-center border border-titleheading div-drop-shadow py-10 px-8 hover:bg-secondary hover:border-primary cursor-pointer">
+              <HomeIcon />
+              <span className="font-bold text-2xl">Guided Tours</span>
+            </div>
+          </Link>
         </div>
       </div>
     </>
