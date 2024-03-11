@@ -2,12 +2,15 @@ import DisplayCard from "@/features/Cards/DisplayCard";
 import { cabinsListing } from "@/data/fakebackend";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import MapIcon from "@/components/icons/MapIcon";
 
 export default function CabinsListing() {
   return (
     <>
       <div className="flex flex-col">
+      
         <div className="flex flex-wrap gap-10 justify-center items-center">
+       
           {cabinsListing.map((cabin, index) => (
             <DisplayCard key={index} cabin={cabin} />
           ))}

@@ -21,7 +21,7 @@ export default function PlaceDetails() {
                 Back
               </Button>
             </Link>
-            <Link href={"/places/place-basics-info"}>
+            <Link href={"/places/user-add-location"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>

@@ -1,29 +1,28 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+"use client"
+import React, { useState, ChangeEvent } from "react";
 
 export default function ATVBasicInfo() {
+  const [seats, setSeats] = useState<string>(""); 
+
+  const handleSeatChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSeats(e.target.value);
+  };
+
   return (
     <>
       <div className="flex flex-col gap-4">
-        <span className="text-heading">How many seats your ATV have?</span>
+        <span className="text-heading">How many seats does your ATV have?</span>
 
-        <div className="flex justify-between items-center">
-          <span className="text-subheading">1 Seated</span>
-          <Checkbox id="1-seated" />
-        </div>
-
-        <div className="flex justify-between items-center">
-          <span className="text-subheading">2 Seated</span>
-          <Checkbox id="2-seated" />
-        </div>
-
-        <div className="flex justify-between items-center">
-          <span className="text-subheading">4 Seated</span>
-          <Checkbox id="4-seated" />
-        </div>
+        <select
+          value={seats}
+          onChange={handleSeatChange}
+          className="w-full text-subheading h-12 rounded-xl px-5 outline-none"
+        >
+          <option value="">Select Number of Seats</option>
+          <option value="1">1 Seated</option>
+          <option value="2">2 Seated</option>
+          <option value="4">4 Seated</option>
+        </select>
       </div>
     </>
   );

@@ -16,7 +16,7 @@ interface Rental {
   image: StaticImageData[]; // an array of string paths to images
   profileAvatar: StaticImageData;
 
-  rating: string; // string representing the rating (e.g., "4.8")
+ // rating: string; // string representing the rating (e.g., "4.8")
   location: string;
   price: string;
 }
@@ -63,11 +63,11 @@ const RentalDisplayCard: React.FC<{ rental: Rental; showIcons: boolean }> = ({
           </div>
         )}
 
-        <div className=" absolute bottom-5 flex w-full px-4 justify-between">
-          <div className="flex items-center gap-2">
+        <div className=" absolute bottom-5 flex w-full px-4 justify-end">
+          {/* <div className="flex items-center gap-2">
             <RatingIcon />
             <span className="text-titleheading font-bold">{rental.rating}</span>
-          </div>
+          </div> */}
           <Image
             src={rental.profileAvatar}
             alt="profile_avatar"

@@ -1,4 +1,4 @@
-import RatingIcon from "@/components/icons/RatingIcon";
+//import RatingIcon from "@/components/icons/RatingIcon";
 import SaveIcon from "@/components/icons/SaveIcon";
 import ShareIcon from "@/components/icons/ShareIcon";
 
@@ -18,10 +18,10 @@ export default function CabinInfo() {
               <span className="text-red-500 font-bold text-lg">$325</span>
               <span>/night</span>
             </div>
-            <div className="space-x-2 flex items-center">
+            {/* <div className="space-x-2 flex items-center">
               <RatingIcon />
               <span className="text-titleheading">4.8</span>
-            </div>
+            </div> */}
           </div>
         </div>
 
