@@ -1,22 +1,19 @@
-"use client";
+"use client"
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 // Define the form validation schema
 const ATVPriceFormSchema = Yup.object().shape({
-  price: Yup.string()
-
-    .required("Price is Required"),
-  service_fee: Yup.string().required("Service Fee is Required"),
+  price: Yup.string().required("Price is Required"),
   accomodation_tax: Yup.string().required("Accomodation Tax is required"),
 });
 
 const ATVPricingForm = () => {
   return (
     <Formik
-      initialValues={{ price: "", service_fee: "", accomodation_tax: "" }}
-      //   validationSchema={LoginFormSchema}
+      initialValues={{ price: "", accomodation_tax: "" }}
+      validationSchema={ATVPriceFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
@@ -33,19 +30,6 @@ const ATVPricingForm = () => {
             />
             {errors.price && touched.price && (
               <div className="text-xs text-red-500 p-2">{errors.price}</div>
-            )}
-          </div>
-          <div>
-            <Field
-              id="service_fee"
-              name="service_fee"
-              className="w-full h-12 rounded-xl p-4 outline-none"
-              placeholder="Service Fee"
-            />
-            {errors.service_fee && touched.service_fee && (
-              <div className="text-xs text-red-500 p-2">
-                {errors.service_fee}
-              </div>
             )}
           </div>
 

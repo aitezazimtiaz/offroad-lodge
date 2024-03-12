@@ -14,7 +14,7 @@ interface Cabin {
   image: StaticImageData[]; // an array of string paths to images
   profileAvatar: StaticImageData;
 
-  rating: string; // string representing the rating (e.g., "4.8")
+  //rating: string; // string representing the rating (e.g., "4.8")
   location: string;
   price: string;
   hostName: string;
@@ -46,11 +46,11 @@ const DisplayCard: React.FC<{ cabin: Cabin }> = ({ cabin }) => {
           <CarouselNext />
         </Carousel>
 
-        <div className=" absolute bottom-5 flex w-full px-4 justify-between">
-          <div className="flex items-center gap-2">
+        <div className=" absolute bottom-5 flex w-full px-4 justify-end">
+          {/* <div className="flex items-center gap-2">
             <RatingIcon />
             <span className="text-titleheading font-bold">{cabin.rating}</span>
-          </div>
+          </div> */}
           <Image
             src={cabin.profileAvatar}
             alt="profile_avatar"

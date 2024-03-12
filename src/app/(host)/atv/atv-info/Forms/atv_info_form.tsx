@@ -6,12 +6,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 // Define the form validation schema
 const ATVFormSchema = Yup.object().shape({
-  title: Yup.string()
-
-    .required("Place Title is Required"),
+  title: Yup.string().required("Place Title is Required"),
   rider_age: Yup.string().required("Rider Age is Required"),
   atv_experience: Yup.string().required("Experience is Required"),
   single_passenger: Yup.string().required("Field is Required"),
+  passenger_description: Yup.string().required("Field is Required"),
   damage_deposit: Yup.string().required("Field is Required"),
   extra_services: Yup.string().required("Field is Required"),
   link: Yup.string().required("Link is Required"),
@@ -25,11 +24,12 @@ const ATVInfoForm = () => {
         rider_age: "",
         atv_experience: "",
         single_passenger: "",
+        passenger_description: "", // Added new field
         damage_deposit: "",
         extra_services: "",
         link: "",
       }}
-      //   validationSchema={LoginFormSchema}
+      validationSchema={ATVFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
@@ -90,6 +90,23 @@ const ATVInfoForm = () => {
 
           <div>
             <Field
+             as="textarea"
+              id="passenger_description"
+              name="passenger_description"
+              type="text"
+              className="w-full h-20 rounded-xl px-5 outline-none"
+              placeholder="Passenger Description"
+            />
+            {errors.passenger_description && touched.passenger_description && (
+              <div className="text-xs text-red-500 p-2">
+                {errors.passenger_description}
+              </div>
+            )}
+          </div>
+
+          <div>
+            <Field
+           
               id="damage_deposit"
               name="damage_deposit"
               type="text"

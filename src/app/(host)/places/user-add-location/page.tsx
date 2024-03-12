@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import PlaceMaps from "./_components/PlaceMaps";
+
 import LocationIcon from "@/components/icons/LocationIcon";
 import SearchIcon from "@/components/icons/SearchIcon";
+import MapsPlace from "./_components/MapsPlace";
 
 export default function PlaceLocation() {
   return (
@@ -25,15 +26,15 @@ export default function PlaceLocation() {
               <SearchIcon className="w-6 h-6" />
             </div>
           </div>
-          <PlaceMaps />
+          <MapsPlace />
 
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/places/describe-place-2"}>
+            <Link href={"/places/place-details"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>
             </Link>
-            <Link href={"/places/place-details"}>
+            <Link href={"/places/place-basics-info"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>

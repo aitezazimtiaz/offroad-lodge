@@ -16,7 +16,7 @@ interface Place {
   image: StaticImageData[]; // an array of string paths to images
   profileAvatar: StaticImageData;
 
-  rating: string; // string representing the rating (e.g., "4.8")
+  //rating: string; // string representing the rating (e.g., "4.8")
   location: string;
   price: string;
 }
@@ -59,11 +59,11 @@ const PlaceDisplayCard: React.FC<{ place: Place }> = ({ place }) => {
           </div>
         </div>
 
-        <div className=" absolute bottom-5 flex w-full px-4 justify-between">
-          <div className="flex items-center gap-2">
+        <div className=" absolute bottom-5 flex w-full px-4 justify-end">
+          {/* <div className="flex items-center gap-2">
             <RatingIcon />
             <span className="text-titleheading font-bold">{place.rating}</span>
-          </div>
+          </div> */}
           <Image
             src={place.profileAvatar}
             alt="profile_avatar"
