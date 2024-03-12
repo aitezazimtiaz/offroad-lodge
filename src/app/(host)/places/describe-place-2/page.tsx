@@ -87,7 +87,7 @@ export default function DescribePlace2() {
                 Back
               </Button>
             </Link>
-            <Link href={"/places/place-info"}>
+            <Link href={"/places/add-location"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>

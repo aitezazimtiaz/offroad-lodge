@@ -20,77 +20,44 @@ export default function PlaceOffers() {
 
   return (
     <>
-      <div className="flex flex-col gap-12 space-y-5  items-center justify-center w-full h-full p-4">
+     <div className="flex flex-col gap-12 space-y-5 items-center justify-center w-full h-full p-4">
         <span className="font-bold text-2xl mt-16 max-sm:text-center">
           Your place is offering
         </span>
 
-        <div className="flex flex-col gap-4 w-1/2 max-xl:w-3/4 max-sm:w-full">
-          <div className="flex flex-col gap-5 rounded-2xl bg-secondary p-8  ">
+        <div className="flex flex-wrap justify-center gap-4 w-3/4 max-xl:w-full max-sm:w-full">
+          {[
+            { label: "Wifi", icon: <WifiIcon /> },
+            { label: "TV", icon: <TVIcon /> },
+            { label: "AirConditioner", icon: <ACIcon /> },
+            { label: "Heating", icon: <HeatingIcon /> },
+          ].map((item, index) => (
             <div
-              className={`rounded-2xl flex max-sm:flex-col max-sm:justify-center max-sm:text-center w-full gap-6 items-center justify-between  div-drop-shadow py-5 px-8 bg-white   cursor-pointer ${
-                selectedDiv === 0
-                  ? " border border-primary font-bold hover:bg-none"
-                  : " border border-titleheading"
+              key={index}
+              className={`rounded-2xl flex flex-col justify-center items-center w-[45%] max-sm:w-full gap-6 div-drop-shadow py-5 px-8 bg-white cursor-pointer ${
+                selectedDiv === index
+                  ? "border border-primary font-bold hover:bg-none"
+                  : "border border-titleheading"
               }`}
-              onClick={() => handleDivClick(0)}
+              onClick={() => handleDivClick(index)}
             >
-              <span className="text-heading text-xl">Wifi</span>
-
-              <WifiIcon />
+              <span className="text-heading text-xl">{item.label}</span>
+              {item.icon}
             </div>
+          ))}
+        </div>
 
-            <div
-              className={`rounded-2xl flex max-sm:flex-col max-sm:justify-center max-sm:text-center w-full gap-6 items-center justify-between  div-drop-shadow py-5 px-8 bg-white   cursor-pointer ${
-                selectedDiv === 1
-                  ? " border border-primary font-bold hover:bg-none"
-                  : " border border-titleheading"
-              }`}
-              onClick={() => handleDivClick(1)}
-            >
-              <span className="text-heading text-xl">TV</span>
-
-              <TVIcon />
-            </div>
-
-            <div
-              className={`rounded-2xl flex max-sm:flex-col max-sm:justify-center max-sm:text-center w-full gap-6 items-center justify-between  div-drop-shadow py-5 px-8 bg-white   cursor-pointer ${
-                selectedDiv === 2
-                  ? " border border-primary font-bold hover:bg-none"
-                  : " border border-titleheading"
-              }`}
-              onClick={() => handleDivClick(2)}
-            >
-              <span className="text-heading text-xl">AirConditioner</span>
-
-              <ACIcon />
-            </div>
-
-            <div
-              className={`rounded-2xl flex max-sm:flex-col max-sm:justify-center max-sm:text-center w-full gap-6 items-center justify-between  div-drop-shadow py-5 px-8 bg-white   cursor-pointer ${
-                selectedDiv === 3
-                  ? " border border-primary font-bold hover:bg-none"
-                  : " border border-titleheading"
-              }`}
-              onClick={() => handleDivClick(3)}
-            >
-              <span className="text-heading text-xl">Heating</span>
-
-              <HeatingIcon />
-            </div>
-          </div>
-          <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/places/places-instructions"}>
-              <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
-                Back
-              </Button>
-            </Link>
-            <Link href={"/places/upload-places-images"}>
-              <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
-                Next
-              </Button>
-            </Link>
-          </div>
+        <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5 max-md:justify-center">
+          <Link href={"/places/place-instructions"}>
+            <Button className="bg-white border border-primary text-lg font-bold text-primary w-32 text-center hover:bg-secondary">
+              Back
+            </Button>
+          </Link>
+          <Link href={"/places/upload-places-images"}>
+            <Button className="bg-primary text-lg font-bold text-white w-32 text-center">
+              Next
+            </Button>
+          </Link>
         </div>
       </div>
     </>

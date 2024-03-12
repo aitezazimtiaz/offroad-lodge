@@ -16,12 +16,12 @@ export default function PlaceInfo() {
           </div>
 
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/places/describe-place-2"}>
+            <Link href={"/places/publish-place"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>
             </Link>
-            <Link href={"/places/add-location"}>
+            <Link href={"/host-home-page"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>

@@ -36,7 +36,7 @@ export default function PublishPlace() {
                 Back
               </Button>
             </Link>
-            <Link href={"/host-home-page"}>
+            <Link href={"/places/place-info"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Publish
               </Button>
