@@ -21,7 +21,7 @@ export default function UploadPlacesImages() {
                 Back
               </Button>
             </Link>
-            <Link href={"/places/publish-place"}>
+            <Link href={"/places/place-info"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export default function ATVPriceCard() {
+export default function TourPriceCard() {
   return (
     <>
       <div className="flex items-center gap-3 p-4 bg-secondary rounded-xl  justify-end max-sm:flex-wrap max-sm:justify-center">

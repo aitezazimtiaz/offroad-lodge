@@ -22,9 +22,9 @@ export default function BasicInfo() {
   };
   return (
     <>
-       <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <span className="text-heading">How many people can stay here?</span>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between border-b border-primary">
           <span className="text-subheading">Guests</span>
           <div className="flex items-center my-3 gap-4">
             <Button
@@ -43,7 +43,7 @@ export default function BasicInfo() {
           </div>
         </div>
 
-        <div className="flex items-center  justify-between">
+        <div className="flex items-center  justify-between border-b border-primary">
           <span className="text-subheading">Bedroom</span>
           <div className="flex items-center my-3 gap-4">
             <Button
@@ -63,9 +63,9 @@ export default function BasicInfo() {
         </div>
 
         <span className="text-heading">How many beds are in each room?</span>
-        <div className="flex items-center my-4 justify-between">
+        <div className="flex items-center  justify-between border-b border-primary ">
           <span className="text-subheading">Beds</span>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 my-3">
             <Button
               className="w-6 h-6 p-2 border border-primary rounded-md bg-transparent text-center text-lg hover:bg-transparent"
               onClick={() => handleDecrement(setBedCount)}
@@ -82,8 +82,6 @@ export default function BasicInfo() {
           </div>
         </div>
 
-       
-
         <span className="text-heading">Size of beds?</span>
         <div className="flex items-center my-2 gap-4">
           <div className="flex gap-2 items-center">
@@ -95,8 +93,6 @@ export default function BasicInfo() {
             <Checkbox id="single-size" />
           </div>
         </div>
-
-       
 
         <span className="text-heading">Does every bedroom have a lock?</span>
         <RadioGroup defaultValue="yes">
@@ -111,8 +107,6 @@ export default function BasicInfo() {
             </div>
           </div>
         </RadioGroup>
-
-     
       </div>
     </>
   );

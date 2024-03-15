@@ -32,7 +32,7 @@ export default function PlaceLocation() {
                 Back
               </Button>
             </Link>
-            <Link href={"/atv/atv-pricing"}>
+            <Link href={"/atv/atv-location-info"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Next
               </Button>
