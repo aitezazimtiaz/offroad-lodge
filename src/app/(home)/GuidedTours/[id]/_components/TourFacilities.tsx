@@ -1,4 +1,4 @@
-export default function ATVFacilities() {
+export default function TourFacilities() {
   return (
     <>
       <div className="flex flex-col p-4 space-y-8">
@@ -11,56 +11,47 @@ export default function ATVFacilities() {
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    Rider Age
+                    Tour Duration
                   </span>
-                  <span className="text-subheading text-lg ">
-                    ADULTs 21 YRs +
-                  </span>
+                  <span className="text-subheading text-lg ">15 Days</span>
                 </div>
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    Single Passengers
+                    Start Location
                   </span>
-                  <span className="text-subheading text-lg ">
-                    ADULT Sport Utility
-                  </span>
+                  <span className="text-subheading text-lg ">Hillside</span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    ATV Experience
+                    Start Time
                   </span>
-                  <span className="text-subheading text-lg ">Any</span>
+                  <span className="text-subheading text-lg ">10:00 AM</span>
                 </div>
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    Damage Deposit
+                    Number of People
                   </span>
-                  <span className="text-subheading text-lg ">
-                    Refundable <span className="text-red-500">$250</span>
-                  </span>
+                  <span className="text-subheading text-lg ">28</span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    ATV Seats
+                    Group Type
                   </span>
-                  <span className="text-subheading text-lg ">2 Seated</span>
+                  <span className="text-subheading text-lg ">Public</span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-heading text-lg font-semibold"></span>
+                  <span className="text-subheading text-lg "></span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-wrap">
-          <span className="text-subheading text-lg">
-            Helmet, Goggles, Gloves, Fuel & Park Pass are INCLUDED Rates are
-            PLUS Liability and Sales Tax, Required by State
-          </span>
         </div>
       </div>
     </>

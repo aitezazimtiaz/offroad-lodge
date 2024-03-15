@@ -16,10 +16,10 @@ export default function TourInfo() {
               <span className="text-red-500 font-bold text-lg">$325</span>
               <span>/per Day</span>
             </div>
-            <div className="space-x-2 flex items-center">
+            {/* <div className="space-x-2 flex items-center">
               <RatingIcon />
               <span className="text-titleheading">4.8</span>
-            </div>
+            </div> */}
           </div>
         </div>
 

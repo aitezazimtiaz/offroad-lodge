@@ -8,7 +8,7 @@ const PlaceFormSchema = Yup.object().shape({
   title: Yup.string()
 
     .required("Place Title is Required"),
-  rules: Yup.string().required("Rules are Required"),
+  description: Yup.string().required("Description is Required"),
   price: Yup.string().required("Price is required"),
 });
 
@@ -37,10 +37,10 @@ const PlaceInfoForm = () => {
           </div>
           <div>
             <textarea
-              id="rules"
-              name="rules"
+              id="description"
+              name="description"
               className="w-full h-28 rounded-xl p-4 outline-none"
-              placeholder="Rules"
+              placeholder="Description"
             />
             {errors.rules && touched.rules && (
               <div className="text-xs text-red-500 p-2">{errors.rules}</div>

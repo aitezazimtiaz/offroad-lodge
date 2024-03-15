@@ -19,7 +19,7 @@ export default function ATVFacilities() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <span className="text-heading text-lg font-semibold">
-                    Single Messangers
+                    Single Passengers
                   </span>
                   <span className="text-subheading text-lg ">
                     ADULT Sport Utility
@@ -41,6 +41,15 @@ export default function ATVFacilities() {
                   <span className="text-subheading text-lg ">
                     Refundable <span className="text-red-500">$250</span>
                   </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2">
+                  <span className="text-heading text-lg font-semibold">
+                    ATV Seats
+                  </span>
+                  <span className="text-subheading text-lg ">2 Seated</span>
                 </div>
               </div>
             </div>

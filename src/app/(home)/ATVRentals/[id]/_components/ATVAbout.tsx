@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function ATVAbout() {
   return (
     <>
@@ -6,9 +8,9 @@ export default function ATVAbout() {
           <span className="text-heading text-2xl font-bold">
             About this ATV
           </span>
-          <span className="text-red-500 underline cursor-pointer">
-            Report this listing
-          </span>
+          <Button className="font-bold text-white rounded-lg px-4 min-w-32">
+            Claim
+          </Button>
         </div>
         <div className="bg-secondary rounded-xl p-4 ">
           <span className="text-heading">

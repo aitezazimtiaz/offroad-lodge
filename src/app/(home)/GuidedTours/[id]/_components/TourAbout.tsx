@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 
-export default function CabinAbout() {
+export default function TourAbout() {
   return (
     <>
       <div className="flex flex-col gap-3">
         <div className="flex justify-between">
           <span className="text-heading text-2xl font-bold">
-            About this place
+            About this Tour
           </span>
           <Button className="font-bold text-white rounded-lg px-4 min-w-32">
             Claim

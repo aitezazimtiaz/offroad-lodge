@@ -31,12 +31,12 @@ export default function PublishPlace() {
             </div>
           </div>
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/places/upload-places-images"}>
+            <Link href={"/places/place-info"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>
             </Link>
-            <Link href={"/places/place-info"}>
+            <Link href={"/host-home-page"}>
               <Button className="bg-primary text-lg font-bold text-white  w-32 text-center  ">
                 Publish
               </Button>

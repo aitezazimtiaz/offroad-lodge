@@ -21,7 +21,7 @@ export default function DescribeATV() {
     <>
       <div className="flex flex-col gap-12 space-y-5  items-center justify-center w-full h-full p-4">
         <span className="font-bold text-2xl mt-16 max-sm:text-center">
-          Describe your Place
+          Describe your ATV
         </span>
 
         <div className="flex flex-col gap-4 w-1/2 max-xl:w-3/4 max-sm:w-full">
