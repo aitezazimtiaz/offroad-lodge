@@ -1,15 +1,15 @@
-import { atvRentalListing } from "@/data/fakebackend";
+import { GuidedtoursListing } from "@/data/fakebackend";
 import { Button } from "@/components/ui/button";
-import RentalDisplayCard from "@/features/Cards/RentalDisplayCard";
-import ATVDisplayCard from "@/features/Cards/ATVDisplayCard";
 
-export default function ATVRentalsListing() {
+import GuidedTourDisplayCard from "@/features/Cards/GuidedTourDisplayCard";
+
+export default function GuidedToursListing() {
   return (
     <>
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-10 justify-center items-center">
-          {atvRentalListing.map((rental, index) => (
-            <ATVDisplayCard key={index} rental={rental} />
+          {GuidedtoursListing.map((tour, index) => (
+            <GuidedTourDisplayCard key={index} tour={tour} />
           ))}
         </div>
         <div className="flex flex-col gap-3 justify-center items-center mt-20">

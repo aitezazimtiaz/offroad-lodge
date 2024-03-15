@@ -59,11 +59,11 @@ const TourDisplayCard: React.FC<{ tour: Tour }> = ({ tour }) => {
           </div>
         </div>
 
-        <div className=" absolute bottom-5 flex w-full px-4 justify-between">
-          <div className="flex items-center gap-2">
+        <div className=" absolute bottom-5 flex w-full px-4 justify-end">
+          {/* <div className="flex items-center gap-2">
             <RatingIcon />
             <span className="text-titleheading font-bold">{tour.rating}</span>
-          </div>
+          </div> */}
           <Image
             src={tour.profileAvatar}
             alt="profile_avatar"

@@ -31,7 +31,7 @@ export default function PublishATV() {
             </div>
           </div>
           <div className="w-full flex items-center justify-end mt-10 mb-10 gap-5">
-            <Link href={"/places/upload-atv-images"}>
+            <Link href={"/atv/upload-atv-images"}>
               <Button className="bg-white border border-primary  text-lg font-bold text-primary  w-32 text-center   hover:bg-secondary">
                 Back
               </Button>
