@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import React, { useState, type ChangeEvent } from "react";
 
 // Define the form validation schema
 const ATVFormSchema = Yup.object().shape({
@@ -10,13 +11,18 @@ const ATVFormSchema = Yup.object().shape({
   rider_age: Yup.string().required("Rider Age is Required"),
   atv_experience: Yup.string().required("Experience is Required"),
   single_passenger: Yup.string().required("Field is Required"),
-  passenger_description: Yup.string().required("Field is Required"),
+  atv_description: Yup.string().required("Field is Required"),
   damage_deposit: Yup.string().required("Field is Required"),
   extra_services: Yup.string().required("Field is Required"),
   link: Yup.string().required("Link is Required"),
 });
 
 const ATVInfoForm = () => {
+  const [passengers, setPassengers] = useState<string>("");
+
+  const handleSeatChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setPassengers(e.target.value);
+  };
   return (
     <Formik
       initialValues={{
@@ -24,12 +30,12 @@ const ATVInfoForm = () => {
         rider_age: "",
         atv_experience: "",
         single_passenger: "",
-        passenger_description: "", // Added new field
+        atv_description: "", // Added new field
         damage_deposit: "",
         extra_services: "",
         link: "",
       }}
-      validationSchema={ATVFormSchema}
+      // validationSchema={ATVFormSchema}
       onSubmit={(values) => {
         console.log(values); // Log the form values
       }}
@@ -74,13 +80,19 @@ const ATVInfoForm = () => {
               </div>
             )}
 
-            <Field
-              id="single_passenger"
-              name="single_passenger"
-              type="text"
-              className="w-full h-12 rounded-xl px-5 outline-none"
-              placeholder="Single Passenger"
-            />
+            <select
+              value={passengers}
+              onChange={handleSeatChange}
+              className="w-full text-subheading h-12 rounded-xl px-5 outline-none"
+            >
+              <option value="">Select Number of Passengers</option>
+              <option value="1">1 Passenger</option>
+              <option value="2">2 Passegers</option>
+              <option value="3">3 Passegers</option>
+              <option value="4">4 Passegers</option>
+              <option value="5">5 Passegers</option>
+              <option value="6">6 Passegers</option>
+            </select>
             {errors.single_passenger && touched.single_passenger && (
               <div className="text-xs text-red-500 p-2">
                 {errors.single_passenger}
@@ -90,23 +102,22 @@ const ATVInfoForm = () => {
 
           <div>
             <Field
-             as="textarea"
-              id="passenger_description"
-              name="passenger_description"
+              as="textarea"
+              id="atv_description"
+              name="atv_description"
               type="text"
-              className="w-full h-20 rounded-xl px-5 outline-none"
-              placeholder="Passenger Description"
+              className="w-full h-20 rounded-xl px-5 py-2 outline-none"
+              placeholder="ATV Description"
             />
-            {errors.passenger_description && touched.passenger_description && (
+            {errors.atv_description && touched.atv_description && (
               <div className="text-xs text-red-500 p-2">
-                {errors.passenger_description}
+                {errors.atv_description}
               </div>
             )}
           </div>
 
           <div>
             <Field
-           
               id="damage_deposit"
               name="damage_deposit"
               type="text"

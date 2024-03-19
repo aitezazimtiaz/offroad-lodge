@@ -1,8 +1,8 @@
-"use client"
-import React, { useState, ChangeEvent } from "react";
+"use client";
+import React, { useState, type ChangeEvent } from "react";
 
 export default function ATVBasicInfo() {
-  const [seats, setSeats] = useState<string>(""); 
+  const [seats, setSeats] = useState<string>("");
 
   const handleSeatChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setSeats(e.target.value);
