@@ -6,7 +6,7 @@ import MapIcon from "@/components/icons/MapIcon";
 export default function GuidedTours() {
   return (
     <>
-      <div className="fixed left-1/2 transform -translate-x-1/2 z-10  ">
+      <div className="sm:fixed left-1/2 sm:transform sm:-translate-x-1/2 z-10 max-sm:flex max-sm:justify-center max-sm:items-center max-sm:mt-3 ">
         <Link href="/GuidedTours/guided-tour-locations">
           <Button className="text-white py-2 w-32 rounded-3xl font-bold cursor-pointer bg-primary">
             <MapIcon className="mr-2" /> Show Map
