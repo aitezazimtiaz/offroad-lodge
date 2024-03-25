@@ -14,7 +14,7 @@ export default function Feed() {
           <span className="text-heading font-bold text-center text-xl  ">
             Need Help?
           </span>
-          <Link href="/Contact Us">
+          <Link href="/ContactUs">
             <Button className="text-white rounded-3xl   font-bold px-10 w-40 ">
               Contact Us
             </Button>
